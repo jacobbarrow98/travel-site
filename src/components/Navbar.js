@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { Button } from './Button';
@@ -18,6 +18,10 @@ function Navbar() {
     }
   };
 
+  useEffect(() => {
+    showButton();
+  }, []);
+
   window.addEventListener('resize', showButton);
 
   return (
@@ -27,6 +31,7 @@ function Navbar() {
           <Link
             to="/"
             className="navbar-logo"
+            onClick={closeMobileMenu}
           >
             Upland Resort
             <i className="fa-sharp fa-solid fa-paw" />
