@@ -2,12 +2,13 @@ import React from 'react';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
+import HeroVideo from '../videos/hero-video.MOV';
 
 function HeroSection() {
   return (
     <div className="hero-container">
       <video
-        src="../public/videos/video-2.mp4"
+        src={HeroVideo}
         autoPlay
         loop
         muted
